@@ -7,16 +7,32 @@ public class Main {
 //        for(int i =0 ;i<arr.length; i++){
 //            System.out.println(arr[i].toString());
 //        }
-        List<Shape> list = new ArrayList<>();
-        Rectangle rec = new Rectangle(2, 5);
-        Square sq = new Square(3);
-        Circle cic = new Circle(5);
-        list.add(rec);
-        list.add(sq);
-        list.add(cic);
-        for (Shape i : list) {
-            System.out.println(i.toString());
-        }
+//        List<Shape> list = new ArrayList<>();
+//        Rectangle rec = new Rectangle(2, 5);
+//        Square sq = new Square(3);
+//        Circle cic = new Circle(5);
+//        list.add(rec);
+//        list.add(sq);
+//        list.add(cic);
+//        for (Shape i : list) {
+//            System.out.println(i.toString());
+//        }
+//        StandartUrl u = new StandartUrl();
+//        System.out.println(u.getParam("param1", "url_example?param1=99"));
+//        ExtendedUrl eu = new ExtendedUrl();
+//        System.out.println(eu.getParam("param1", "url_example/param1.55/param2.byte"));
+//            Moveable[] movTab = new Moveable[2];
+//            movTab[0] = new Person();
+//            movTab[1] = new Cat();
+//            for(Moveable i : movTab){
+//                i.start();
+//            }
+        Post post = new Post();
+        post.setTitle("Some title");
+        post.setContent("Some content");
 
+        post.attach(new FacebookObserver());
+        post.attach(new TwitterObserver());
+        post.share();
     }
 }
