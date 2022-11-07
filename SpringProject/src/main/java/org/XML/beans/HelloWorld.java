@@ -1,9 +1,10 @@
-package org.example;
+package org.XML.beans;
 
 public class HelloWorld {
     private String message;
 
-    public HelloWorld() {
+    public HelloWorld(String message) {
+        this.message = message;
     }
 
     public String getMessage() {
@@ -13,7 +14,6 @@ public class HelloWorld {
     public void setMessage(String message) {
         this.message = message;
     }
-
     public void printMessage() {
         System.out.println("Your Message : " + message);
     }

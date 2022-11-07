@@ -2,5 +2,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="helloWorld" class="org.example.HelloWorld"/>
+<!--    <bean name="HelloWorld" class="org.example.beans.HelloWorld">-->
+<!--        <constructor-arg name="message" value="Witaj Spring"/>-->
+<!--        <property name="message" value="Witaj Spring - by setter"/>-->
+<!--    </bean>-->
+
+    <bean id="messageService" class="org.XML.beans.EmailService"></bean>
+    <bean id="ms" class="org.XML.beans.MessageSender">
+        <constructor-arg ref="messageService"/>
+        <property name="message" value="message from XML"/>
+    </bean>
+
+    <!--    <bean id="helloWorld" class="org.example.HelloWorld">-->
+    <!--        <constructor-arg name="message" value="Hello World"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="notificationService" class="org.example.EmailService" />-->
+    <!--    <bean id="messageSender" class="org.example.MessageSender">-->
+    <!--        <constructor-arg ref="notificationService"/>-->
+    <!--        <property name="message" value="Treść wiadomości"/>-->
+    <!--    </bean>-->
 </beans>
